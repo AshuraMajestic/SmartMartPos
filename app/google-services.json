@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "841840729656",
+    "project_id": "scannercollege-628b7",
+    "storage_bucket": "scannercollege-628b7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:841840729656:android:493d76114b17b2f7a710cd",
+        "android_client_info": {
+          "package_name": "com.example.scannercollege"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCZlHS7ObZhnPIe06_I_NOuwe-AmGDkekY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
