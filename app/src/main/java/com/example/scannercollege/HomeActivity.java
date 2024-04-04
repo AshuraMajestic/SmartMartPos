@@ -10,6 +10,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.LinearLayout;
+import android.widget.Toast;
 
 import com.example.scannercollege.Domain.UserData;
 import com.google.android.material.textfield.TextInputLayout;
@@ -35,7 +36,10 @@ private TextInputLayout NameLayout,NumberLayout,MailLayout;
                 String name = nameEditText.getText().toString();
                 String phoneNumber = numberEditText.getText().toString().trim();
                 String email = emailEditText.getText().toString().trim();
-
+                if(name.isEmpty() || phoneNumber.isEmpty() || email.isEmpty()){
+                    Toast.makeText(HomeActivity.this, "Please Enter the Detail", Toast.LENGTH_SHORT).show();
+                    return;
+                }
                 // Store data in a temporary storage (You can use SharedPreferences, Bundle, Singleton, etc.)
                 UserData userData = UserData.getInstance();
                 userData.setName(name);
