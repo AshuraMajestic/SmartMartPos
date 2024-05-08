@@ -41,29 +41,35 @@ Run the app on an emulator or physical device to ensure everything is set up cor
 ## APPLICATION PROCESSING AND DESIGN
 
 ### Step 1: opening Of Application with logo
-![Screenshot 1](screenshots/1.jpg)
+
+![Screenshot 1](screenshots/1.jpg){: width="300px" height="600"}
 
 
 ### Step 2: Enter my details
-![Screenshot 2](screenshots/2.jpg)
+
+![Screenshot 2](screenshots/2.jpg){: width="300px" height="600"}
 
 ### Step 3: Scanning barcodes and showing scanned products
-![Screenshot 2](screenshots/3.jpg)
+
+![Screenshot 2](screenshots/3.jpg){: width="300px" height="600"}
 
 ### Step 2: Generating the bill
-![Screenshot 2](screenshots/4.jpg)
+
+![Screenshot 2](screenshots/4.jpg){: width="300px" height="600"}
 
 
 ### Step 2: Bill downloaded and sent
-![Screenshot 2](screenshots/5.jpg)
+
+![Screenshot 2](screenshots/5.jpg){: width="300px" height="600"}
 
 
 ### Step 2: Bill Pdf
-![Screenshot 2](screenshots/6.jpg)
+
+![Screenshot 2](screenshots/6.jpg){: width="300px" height="600"}
 
 
 # CREDITS
-## Desinged BY : KRUTVA PATEL
+## Desinged BY : KRUTVA PATEL @SuGAr9807
 
 ## Contributing
 
