@@ -69,7 +69,7 @@ Run the app on an emulator or physical device to ensure everything is set up cor
 
 
 # CREDITS
-## Desinged BY : KRUTVA PATEL @SuGAr9807
+## Desinged BY : [Sugar]([URL](https://github.com/SuGAr9807)) (KRUTVA PATEL)
 
 ## Contributing
 
