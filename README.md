@@ -68,8 +68,8 @@ Run the app on an emulator or physical device to ensure everything is set up cor
 ![Screenshot 2](screenshots/6.jpg){: width="300px" height="600"}
 
 
-# CREDITS
-## Desinged BY : [Sugar]([URL](https://github.com/SuGAr9807)) (KRUTVA PATEL)
+
+## Designed BY : [Sugar](https://github.com/SuGAr9807) (KRUTVA PATEL)
 
 ## Contributing
 
