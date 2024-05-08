@@ -10,7 +10,7 @@ Follow these steps to set up the project:
 Clone this repository to your local machine using the following command:
 
 ```bash
-git clone https://github.com/your-username/firebase-android-project.git
+git clone https://github.com/AshuraMajestic/SmartMartPos.git
 ```
 
 ### Step 2: Open Project in Android Studio
@@ -60,6 +60,10 @@ Run the app on an emulator or physical device to ensure everything is set up cor
 
 ### Step 2: Bill Pdf
 ![Screenshot 2](screenshots/s6.png)
+
+
+# CREDITS
+## Desinged BY : KRUTVA PATEL
 
 ## Contributing
 
