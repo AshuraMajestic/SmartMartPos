@@ -42,31 +42,28 @@ Run the app on an emulator or physical device to ensure everything is set up cor
 
 ### Step 1: opening Of Application with logo
 
-![Screenshot 1](screenshots/1.jpg){: width="300px" height="600"}
+<img src="screenshots/1.jpg" alt="Screenshot 1" width="300px" height="600px">
 
 
 ### Step 2: Enter my details
 
-![Screenshot 2](screenshots/2.jpg){: width="300px" height="600"}
+<img src="screenshots/2.jpg" alt="Screenshot 2" width="300px" height="600px">
 
 ### Step 3: Scanning barcodes and showing scanned products
 
-![Screenshot 2](screenshots/3.jpg){: width="300px" height="600"}
+<img src="screenshots/3.jpg" alt="Screenshot 3" width="300px" height="600px">
 
-### Step 2: Generating the bill
+### Step 4: Generating the bill
 
-![Screenshot 2](screenshots/4.jpg){: width="300px" height="600"}
+<img src="screenshots/4.jpg" alt="Screenshot 4" width="300px" height="600px">
 
+### Step 5: Bill downloaded and sent
 
-### Step 2: Bill downloaded and sent
+<img src="screenshots/5.jpg" alt="Screenshot 5" width="300px" height="600px">
 
-![Screenshot 2](screenshots/5.jpg){: width="300px" height="600"}
+### Step 6: Bill Pdf
 
-
-### Step 2: Bill Pdf
-
-![Screenshot 2](screenshots/6.jpg){: width="300px" height="600"}
-
+<img src="screenshots/6.jpg" alt="Screenshot 6" width="300px" height="600px">
 
 
 ## Designed BY : [Sugar](https://github.com/SuGAr9807) (KRUTVA PATEL)
