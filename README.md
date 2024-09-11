@@ -66,7 +66,7 @@ Run the app on an emulator or physical device to ensure everything is set up cor
 <img src="screenshots/6.jpg" alt="Screenshot 6" width="300px" height="600px">
 
 
-## Designed BY : [Sugar](https://github.com/SuGAr9807) (KRUTVA PATEL)
+## **Team Member** : [Sugar](https://github.com/SuGAr9807) (KRUTVA PATEL)
 
 ## Contributing
 
