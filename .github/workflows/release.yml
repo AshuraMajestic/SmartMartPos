@@ -2,42 +2,54 @@ name: Android Release
 
 on:
   push:
-    branches:
-      - main
+    tags:
+      - 'v*'
 
 jobs:
   build:
     runs-on: ubuntu-latest
-
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v2
+      - name: Checkout code
+        uses: actions/checkout@v3
 
-    - name: Set up JDK 11
-      uses: actions/setup-java@v2
-      with:
-        distribution: 'zulu'
-        java-version: 11
+      - name: Set up JDK
+        uses: actions/setup-java@v3
+        with:
+          distribution: 'zulu'
+          java-version: '1.8' # Matching your sourceCompatibility
+          cache: gradle
 
-    - name: Grant execute permission for gradlew
-      run: chmod +x gradlew
+      - name: Setup Google Services
+        run: |
+          echo "${{ secrets.GOOGLE_SERVICES_JSON }}" > app/google-services.json
 
-    - name: Build with Gradle
-      run: ./gradlew assembleRelease
+      - name: Grant execute permission for gradlew
+        run: chmod +x ./gradlew
 
-    - name: Sign APK
-      env:
-        KEYSTORE_PATH: ${{ secrets.KEYSTORE_PATH }}
-        KEYSTORE_PASSWORD: ${{ secrets.KEYSTORE_PASSWORD }}
-        KEY_ALIAS: ${{ secrets.KEY_ALIAS }}
-        KEY_PASSWORD: ${{ secrets.KEY_PASSWORD }}
-      run: |
-        echo "${KEYSTORE_PATH}" | base64 --decode > keystore.jks
-        jarsigner -verbose -sigalg SHA256withRSA -digestalg SHA-256 -keystore keystore.jks -storepass $KEYSTORE_PASSWORD -keypass $KEY_PASSWORD app/build/outputs/apk/release/app-release-unsigned.apk $KEY_ALIAS
-        zipalign -v 4 app/build/outputs/apk/release/app-release-unsigned.apk app/build/outputs/apk/release/app-release.apk
+      - name: Build Release APK
+        run: ./gradlew assembleRelease
 
-    - name: Upload APK
-      uses: actions/upload-artifact@v2
-      with:
-        name: app-release.apk
-        path: app/build/outputs/apk/release/app-release.apk
+      - name: Sign APK
+        uses: r0adkll/sign-android-release@v1
+        id: sign_app
+        with:
+          releaseDirectory: app/build/outputs/apk/release
+          signingKeyBase64: ${{ secrets.SIGNING_KEY }}
+          alias: ${{ secrets.KEY_ALIAS }}
+          keyStorePassword: ${{ secrets.KEY_STORE_PASSWORD }}
+          keyPassword: ${{ secrets.KEY_PASSWORD }}
+        env:
+          BUILD_TOOLS_VERSION: "34.0.0" # Updated to match your compileSdk
+
+      - name: Create Release
+        id: create_release
+        uses: softprops/action-gh-release@v1
+        with:
+          files: ${{ steps.sign_app.outputs.signedReleaseFile }}
+          name: Release ${{ github.ref_name }}
+          body: |
+            Scanner College App ${{ github.ref_name }}
+            
+            Download and install the APK directly on your Android device.
+          draft: false
+          prerelease: false
