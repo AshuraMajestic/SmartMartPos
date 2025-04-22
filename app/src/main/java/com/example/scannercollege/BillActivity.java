@@ -54,7 +54,7 @@ public class BillActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 generatePDF();
-
+// g
             }
         });
         UserData userData = UserData.getInstance();
