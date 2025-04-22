@@ -7,6 +7,7 @@ import androidx.core.content.ContextCompat;
 import android.content.Intent;
 import android.graphics.drawable.GradientDrawable;
 import android.os.Bundle;
+import android.util.Patterns;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.LinearLayout;
@@ -40,6 +41,15 @@ private TextInputLayout NameLayout,NumberLayout,MailLayout;
                     Toast.makeText(HomeActivity.this, "Please Enter the Detail", Toast.LENGTH_SHORT).show();
                     return;
                 }
+                if (!isValidPhoneNumber(phoneNumber)) {
+                    Toast.makeText(HomeActivity.this, "Invalid Phone Number", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+
+                if (!isValidEmail(email)) {
+                    Toast.makeText(HomeActivity.this, "Invalid Email Address", Toast.LENGTH_SHORT).show();
+                    return;
+                }
                 // Store data in a temporary storage (You can use SharedPreferences, Bundle, Singleton, etc.)
                 UserData userData = UserData.getInstance();
                 userData.setName(name);
@@ -51,5 +61,15 @@ private TextInputLayout NameLayout,NumberLayout,MailLayout;
                 startActivity(intent);
             }
         });
+    }
+    private boolean isValidPhoneNumber(String phoneNumber) {
+        // Regular expression for validating a phone number (10 digits)
+        String phoneNumberPattern = "^[0-9]{10}$";
+        return phoneNumber.matches(phoneNumberPattern);
+    }
+
+    private boolean isValidEmail(String email) {
+        // Using Android's built-in Patterns class to validate email
+        return Patterns.EMAIL_ADDRESS.matcher(email).matches();
     }
 }

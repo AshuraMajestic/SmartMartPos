@@ -120,9 +120,9 @@ public class BillActivity extends AppCompatActivity {
         File file = new File(filePath);
         try {
             if (file.exists()) {
-                file.delete(); // Delete the existing file
+                file.delete();
             }
-            file.createNewFile(); // Create a new file
+            file.createNewFile();
             document.writeTo(new FileOutputStream(file));
             Toast.makeText(this, "PDF Saved to: " + filePath, Toast.LENGTH_SHORT).show();
             makeLog(filePath);
